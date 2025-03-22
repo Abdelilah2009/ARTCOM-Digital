@@ -1,0 +1,329 @@
+
+
+a {
+    text-decoration: none;
+    outline: 0;
+    -webkit-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+}
+
+a:active,
+a:focus,
+a:hover,
+a:visited {
+    text-decoration: none;
+    outline: 0;
+}
+
+button {
+    -webkit-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+
+
+p {
+    font-family: var(--body-font);
+    margin: 0 0 18px 0;
+    color: #838383;
+    line-height: 1.75;
+    font-size: 18px;
+}
+
+
+
+
+/*------------------- 3.2. Buttons -------------------*/
+.th-btn {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 20.5px 20px;
+    min-width: 144px;
+    border-radius: 4px;
+}
+
+.th-btn:before,
+.th-btn:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    z-index: -1;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    border-radius: 99px;
+    -webkit-transform: scaleY(1.1);
+    -ms-transform: scaleY(1.1);
+    transform: scaleY(1.1);
+}
+
+.th-btn:before {
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+.th-btn:after {
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+.th-btn:hover,
+.th-btn.active {
+    color: var(--white-color);
+    box-shadow: none;
+}
+
+.th-btn:hover::before,
+.th-btn:hover:after,
+.th-btn.active::before,
+.th-btn.active:after {
+    border-radius: 0;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.th-btn.style2 {
+    background-color: transparent;
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 20px 40px;
+    box-shadow: none;
+}
+
+.th-btn.style2:hover {
+    color: var(--dark-color);
+    border-color: var(--white-color);
+}
+
+.th-btn.style2:hover:before,
+.th-btn.style2:hover:after {
+    background-color: var(--white-color);
+}
+
+.th-btn.style3:hover {
+    color: var(--dark-color);
+}
+
+.th-btn.style3:hover:before,
+.th-btn.style3:hover:after {
+    background-color: var(--white-color);
+}
+
+.th-btn.style4 {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.th-btn.style4:hover {
+    color: var(--dark-color);
+}
+
+.th-btn.style4:hover:before,
+.th-btn.style4:hover:after {
+    background-color: var(--white-color);
+}
+
+.th-btn.style5 {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    box-shadow: none;
+}
+
+.th-btn.style5:hover {
+    color: var(--white-color);
+}
+
+.th-btn.style5:hover:before,
+.th-btn.style5:hover:after {
+    background-color: var(--main-color);
+}
+
+
+/*------------------- 4.1. Widget  -------------------*/
+
+
+.widget_nav_menu>ul,
+.widget_nav_menu .menu{
+    margin: 0 0 -10px 0;
+}
+
+.widget_nav_menu a{
+    display: block;
+    background-color: var(--white-color);
+    margin: 0 0 10px 0;
+    padding: 16px 45px 19px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.313;
+    color: #3d3d3d;
+    border-radius: 4px;
+}
+
+.widget_nav_menu a::before {
+    content: "\f061";
+    position: absolute;
+    right: 25px;
+    top: 17px;
+    font-weight: 600;
+    color: var(--main-color);
+    -webkit-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+}
+
+.widget_nav_menu li{
+    display: block;
+    position: relative;
+}
+
+.widget_nav_menu li:last-child a {
+    border-bottom: none;
+}
+
+
+
+.widget_nav_menu a:hover ,
+.widget_nav_menu .btn-active-color{
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+
+
+.widget_nav_menu a:hover:before,
+.widget_meta a:hover:before,
+.widget_pages a:hover:before,
+.widget_archive a:hover:before,
+.widget_categories a:hover:before {
+    color: var(--white-color);
+}
+
+.widget_nav_menu a:hover~span,
+.widget_meta a:hover~span,
+.widget_pages a:hover~span,
+.widget_archive a:hover~span,
+.widget_categories a:hover~span {
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+
+.widget_nav_menu .children,
+.widget_meta .children,
+.widget_pages .children,
+.widget_archive .children,
+.widget_categories .children {
+    margin-left: 10px;
+}
+
+.widget_nav_menu a,
+.widget_meta a,
+.widget_pages a {
+    padding-right: 20px;
+}
+
+.widget_nav_menu .sub-menu {
+    margin-left: 10px;
+}
+
+.wp-block-archives {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.wp-block-archives a:not(:hover) {
+    color: inherit;
+}
+
+.th-blog ul.wp-block-archives li {
+    margin: 5px 0;
+}
+
+.widget {
+    padding: var(--widget-padding-y, 40px) var(--widget-padding-x, 40px);
+    background-color: #3d3d3d2b;
+    margin-bottom: 40px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.widget[data-overlay]:before {
+    z-index: -1;
+}
+
+.widget .th-social a {
+    box-shadow: 0px 2px 14px rgba(4, 6, 66, 0.1);
+}
+
+.widget_title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--title-font);
+    line-height: 1em;
+    margin: -0.12em 0 28px 0;
+}
+
+
+
+
+.download-widget-wrap .th-btn {
+    width: 100%;
+}
+
+.download-widget-wrap .th-btn:first-child {
+    margin-bottom: 20px;
+}
+
+.download-widget-wrap .th-btn.style2 {
+    color: #3d3d3d;
+}
+
+.download-widget-wrap .th-btn.style2:before,
+.download-widget-wrap .th-btn.style2:after {
+    background-color: var(--main-color);
+}
+
+.download-widget-wrap .th-btn.style2:hover {
+    color: var(--white-color);
+    border-color: var(--main-color);
+}
+
+
+/* Service Details ---------------------------------- */
+.page-title {
+    margin-top: -0.22em;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.page-img {
+    margin-bottom: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.page-single {
+    margin-bottom: 30px;
+}
